@@ -22,10 +22,9 @@
       background-image: url("img/z16.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      background-repeat: no-repeat;
       height: 100vh;
       width: 100vw;
-      background-attachment: fixed; /* Para fixar a imagem no fundo */
+      background-attachment: fixed;
     }
 
     header {
@@ -58,7 +57,7 @@
     .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* <-- Centraliza o conteúdo na horizontal */
+        justify-content: center;
         align-items: center;
         padding: 2rem;
         max-width: 1200px;
@@ -67,8 +66,7 @@
     }
 
     .sidebar {
-        flex: 0 0 auto; /* Impede que estique ou encolha */
-        
+        flex: 0 0 auto;
         padding: 2rem;
         border-radius: 10px;
         text-align: center;
@@ -107,7 +105,7 @@
     }
 
     section h2 {
-      border-bottom: 2px solid #ffffff;
+      border-bottom: 2px solid #00bcd4;
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
       font-size: 1.8rem;
@@ -122,60 +120,30 @@
       border-radius: 12px;
     }
 
-    .project-carousel-wrapper {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .project-container {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-
-    .project-item {
-      flex: 0 0 150px;
-      text-align: center;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .project-image:hover {
-      transform: scale(1.05);
-    }
-
     .carousel-wrapper {
-        position: relative;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        margin: 20px 0;
-        width: 100%; /* Garante que não ultrapasse */
-        max-width: 100%; /* Protege contra overflow */
-        min-width: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      margin: 20px 0;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
     }
 
     .carousel {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* IE 10+ */
-        max-width: 100%;
-        width: 100%;
-        flex-wrap: nowrap;
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      max-width: 100%;
+      width: 100%;
+      flex-wrap: nowrap;
     }
 
     .carousel::-webkit-scrollbar {
-        display: none; /* Chrome, Safari */
+      display: none;
     }
 
     .carousel-item {
@@ -195,31 +163,35 @@
         object-fit: cover;
     }
 
+    .carousel-item:hover {
+        transform: scale(1.05);
+    }
+
     .carousel-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0,0,0,0.5);
-        color: white;
-        border: none;
-        font-size: 2rem;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 10;
-        border-radius: 50%;
-        transition: background 0.2s;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      transition: background 0.2s;
     }
 
     .carousel-btn:hover {
-        background-color: rgba(255,255,255,0.2);
+      background-color: rgba(255,255,255,0.2);
     }
 
     .carousel-btn.left {
-        left: 10px;
+      left: 10px;
     }
 
     .carousel-btn.right {
-        right: 10px;
+      right: 10px;
     }
 
     #blog ul {
@@ -281,6 +253,7 @@
         margin-bottom: 2rem;
       }
     }
+
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
@@ -321,27 +294,38 @@
       visibility: visible;
       opacity: 1;
     }
+    .project-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .project-item {
+      flex: 0 0 150px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Vitor Santos</h1>
-    <h2>Engenheiro de Redes</h2>
+    <h2>Network Engineer</h2>
     <div class="language-switcher">
-      <span>Change language to:</span>
-      <a href="./index-en.html"><img src="img/eua.png" alt="English"></a>
+      <span>Change Language to:</span>
+      <a href="./index.html"><img src="./img/bra.png" alt="Brazilian Portuguese"></a>
     </div>
   </header>
   <div class="container">
     <aside class="sidebar">
-      <img src="img/perfil.jpg" alt="Foto de perfil">
+      <img src="./img/perfil.png" alt="Foto de perfil">
       <a href="https://www.linkedin.com/in/vdosantos/" target="_blank">LinkedIn</a>
-      <a href="cv-vitor.pdf" download>Download CV</a>
+      <a href="cv-vitor.pdf" download>Download resume</a>
       <a href="https://github.com/vitdosantos" target="_blank">GitHub</a>
     </aside>
     <main>
       <section id="projects">
-        <h2>Projetos principais</h2>
+        <h2>Mainly Projects</h2>
         <div class="carousel-wrapper">
           <!-- <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button> -->
           
@@ -349,11 +333,12 @@
             <!-- Replique esse bloco para adicionar mais projetos -->
             <div class="carousel-item">
               <img src="./img/cisco 2022.png" alt="Projeto 1">
-              <p>Prova de Cisco do mundial de 2022</p>
+              <p>Test Project of Cisco's WorldSkills 2022</p><br>
             </div>
             <div class="carousel-item">
-              <img src="./img/linux2022.png" alt="Projeto 2">
-              <p>Prova de Linux do mundial de 2022</p>
+              <img src="./img/linux 2022.png" alt="Projeto 2">
+              <p>Test Project of Linux's WorldSkills 2022</p><br>
+            </div>
             <!-- Adicione mais blocos conforme necessário -->
           </div>
       
@@ -361,7 +346,7 @@
         </div>
       </section>
       <section id="Tools">
-        <h2>Experiência com</h2>
+        <h2>Experienced with</h2>
         <div class="skills-grid">
           <div class="tooltip-container">
             <img src="https://skillicons.dev/icons?i=linux" alt="Linux">
@@ -403,24 +388,36 @@
             <img src="https://skillicons.dev/icons?i=ansible" alt="Ansible">
             <div class="tooltip-text">Ansible</div>
           </div>
+          <div align="center">
+            <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=Jira&logoColor=whit" alt="Jira">
+            <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack">
+            <img src="https://img.shields.io/badge/Argo%20CD-1e0b3e?style=for-the-badge&logo=argo&logoColor=#d16044" alt="ArgoCD">
+            <img src="https://img.shields.io/badge/Vagrant-1868F2?style=for-the-badge&logo=Vagrant&logoColor=white" alt="Vangrant">
+            <img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white" alt="Google Play Store">
+            <img src="https://img.shields.io/badge/Snyk-4C4A73?style=for-the-badge&logo=snyk&logoColor=white" alt="Snyk">
+            <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=black" alt="Oracle Cloud">
+            <img src="https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white" alt="Azure DevOps">
+            <img src="https://img.shields.io/badge/Sonarqube-5190cf?style=for-the-badge&logo=sonarqube&logoColor=white" alt="Sonarqube">
+          </div>
         </div>
       </section>
       <section id="experience">
         <h2>Resumo</h2>
-        <p>Sou estudante de redes, com foco em configuração e segurança em ambientes complexos utilizando equipamentos Cisco e Debian para criar servidores com base em stacks open-source, sou especializado em Switching & Routing, WAN (VPNs Layer 2, MPLS, VPNv4, EVPN, VRF). Sempre seguindo as boas práticas e padrões do mercado.</p>
+        <p>I am a networking student, focused on configuration and security in complex environments using Cisco and Debian equipment to create servers based on open-source stacks. I specialize in Switching & Routing, WAN (Layer 2 VPNs, MPLS, VPNv4, EVPN, VRF). Always following best practices and market standards.</p>
       </section>
       <!-- <section id="blog">
-        <h2>Recomendados por mim</h2>
+        <h2>Recommended by Me!</h2>
         <ul>
           <li>
-            <a href="blog/tutorial-docker.html">🔥DevOps Hands-On: Da Teoria à Prática (Em breve)</a>
-            <span class="promo-box">Mais Acessado</span>
+            <a href="blog/tutorial-docker.html">🔥DevOps Hands-On: Da Teoria à Prática (Coming Soon)</a>
+            <span class="promo-box">Most viewed</span>
+            <span class="promo-box">Course by me</span>
           </li>
         </ul>
       </section> -->
 
       <section id="cert">
-        <h2>Certificações</h2>
+        <h2>Certifications</h2>
         <div class="project-container">
           
           <div class="project-item">
